@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { MyStore } from "../context/MyContext";
 
 const Contact = () => {
-  return (
-    <div>Contact</div>
-  )
-}
+  console.log("Contact rendering...");
 
-export default Contact
+  return (
+    <div>
+      <h1>Contact page</h1>
+    </div>
+  );
+};
+
+export default Contact;

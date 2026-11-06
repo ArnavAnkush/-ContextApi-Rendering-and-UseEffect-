@@ -1,10 +1,14 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 // consumer
 export const MyStore = createContext();
 
 // provider
-export const ContextProvider = ({children}) => {
-    return <MyStore.Provider>{children}</MyStore.Provider>
-}
+export const ContextProvider = ({ children }) => {
+  console.log("context rendering..");
+  const [count, setCount] = useState(0);
 
+  return (
+    <MyStore.Provider value={{ count, setCount }}>{children}</MyStore.Provider>
+  );
+};
